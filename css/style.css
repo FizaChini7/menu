@@ -1,0 +1,144 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul,ol{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+}
+
+.main{
+  height: 60px;
+  width: 950px;
+  background-color: blue;
+  margin: auto;
+  
+}
+.bacimag{
+    height: 800px;
+    width: 950px;
+    background-image: url(../image/1.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: auto;
+}
+
+.main ul li{
+    float: left;
+    position: relative;
+}
+
+.main  ul li a{
+    color: white;
+    font-size: 16px;
+    font-weight: 600; 
+    padding: 21px 25px;
+    display: block;
+    font-family: sans-serif;
+    border-right:1px solid white;
+    position: relative;
+   transition: .5s;
+}
+
+ .main ul li:hover > a{
+    background-color: red;
+  
+} 
+
+.main > ul > li:last-child > a{
+    background-color: red;
+    border-right: 0;
+    
+   
+}
+.main ul li a:after{
+    content: '';
+    position: absolute;
+    background-color: black;
+    left: 0;
+    bottom: 0;
+    height: 5px;
+    width: 0;
+    transition: .5s;
+}
+.main ul li:hover > a:after{
+  
+   width: 100%;
+}
+
+.main ul li a:before{
+    content: '';
+    position: absolute;
+    background-color: black;
+    right: 0;
+    top: 0;
+    height: 5px;
+    width: 0;
+  
+    transition: .5s;
+}
+.main ul li:hover > a:before{
+  
+    width: 100%;
+
+}
+ .main ul li:after{
+    content: '';
+    position: absolute;
+    background-color: black;
+    left: 0;
+    top: 0;
+    height: 0;
+    width: 5px;
+    transition: .5s;
+}
+.main ul li:hover:after{
+  
+    height: 100%;
+} 
+.main ul li:before{
+    content: '';
+    position: absolute;
+    background-color: black;
+    right: 0;
+    bottom: 0;
+    height: 0;
+    width: 5px;
+    transition: .5s;
+    z-index: 1;
+}
+.main ul li:hover:before{
+  
+    height: 100%;
+}
+/* drop-down */
+.main ul li ul{
+    position: absolute;
+    background-color: blue;
+    width: 200px;
+    visibility: hidden;
+    opacity: 0;
+    transition: .5s;
+    margin-top: 70px;
+}
+.main ul li ul li{
+    width: 100%;
+}
+.main ul li ul li a{
+    border-right: 0;
+    text-transform: capitalize;
+}
+.main ul li:hover > ul{
+       visibility: visible;
+       opacity: 1;
+       margin-top: 0;
+}
+
+.main li ul li ul{
+    left: 100%;
+    top: 0;
+} 
