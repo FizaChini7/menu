@@ -83,38 +83,7 @@ a{
 }
 .main ul li:hover > a:before{
   
-    width: 100%;
-
-}
- .main ul li:after{
-    content: '';
-    position: absolute;
-    background-color: black;
-    left: 0;
-    top: 0;
-    height: 0;
-    width: 5px;
-    transition: .5s;
-}
-.main ul li:hover:after{
-  
-    height: 100%;
-} 
-.main ul li:before{
-    content: '';
-    position: absolute;
-    background-color: black;
-    right: 0;
-    bottom: 0;
-    height: 0;
-    width: 5px;
-    transition: .5s;
-    z-index: 1;
-}
-.main ul li:hover:before{
-  
-    height: 100%;
-}
+    width: 100%;}
 /* drop-down */
 .main ul li ul{
     position: absolute;
@@ -131,6 +100,7 @@ a{
 .main ul li ul li a{
     border-right: 0;
     text-transform: capitalize;
+    padding-left: 32px;
 }
 .main ul li:hover > ul{
        visibility: visible;
@@ -142,3 +112,21 @@ a{
     left: 100%;
     top: 0;
 } 
+
+.main ul li ul li:after{
+    content: '';
+    position: absolute;
+    left: 5px;
+    top: calc(50% - 7.5px);
+    height: 10px;
+    width: 15px;
+    border-radius: 50%;
+    background-color: aquamarine;
+    transition: .5s;
+   
+    
+
+}
+.main ul li ul li:hover:after{
+        left: 15px;
+}
